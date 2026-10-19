@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>瀚鸿塑胶玩具制品厂 | HANHONG TOYS</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    background: #0f1c2e;
+    color: #e2e8f0;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #162a42 0%, #0f1c2e 100%);
+    border-bottom: 2px solid #c9a84c;
+    padding: 28px 20px 24px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  header p {
+    font-size: 13px;
+    color: #8a9bb5;
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+
+  /* Contact bar */
+  .contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px 20px;
+    background: #162a42;
+    font-size: 14px;
+    border-bottom: 1px solid #1e3a5f;
+  }
+  .contact-bar a {
+    color: #c9a84c;
+    text-decoration: none;
+  }
+  .contact-bar span { color: #8a9bb5; }
+
+  /* Section title */
+  .section-title {
+    text-align: center;
+    padding: 32px 20px 20px;
+    font-size: 18px;
+    color: #c9a84c;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* Product grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 20px 40px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  @media (min-width: 641px) {
+    .grid { grid-template-columns: repeat(4, 1fr); max-width: 960px; }
+  }
+
+  .card {
+    background: linear-gradient(145deg, #162a42, #1a3352);
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 28px 16px 22px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: #c9a84c66;
+  }
+
+  /* Emoji icon placeholder */
+  .icon {
+    font-size: 48px;
+    margin-bottom: 14px;
+    display: block;
+  }
+  .card h3 {
+    font-size: 17px;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 12px;
+    color: #8a9bb5;
+    line-height: 1.6;
+  }
+
+  /* Accent colors per category */
+  .card:nth-child(1) { border-top: 3px solid #e07b39; }
+  .card:nth-child(2) { border-top: 3px solid #4a90d9; }
+  .card:nth-child(3) { border-top: 3px solid #e8563f; }
+  .card:nth-child(4) { border-top: 3px solid #6abf69; }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 20px 20px 40px;
+  }
+  .cta a {
+    display: inline-block;
+    background: #c9a84c;
+    color: #0f1c2e;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .cta a:hover { background: #d4b95e; }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #4a5568;
+    border-top: 1px solid #1e3a5f;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>瀚鸿塑胶玩具制品厂</h1>
+  <p>HANHONG PLASTIC TOYS FACTORY · 专注塑胶人偶玩具制造</p>
+</header>
+
+<div class="contact-bar">
+  <span>👤 林蔚宏</span>
+  <a href="tel:+8613715896168">📱 +86 137 1589 6168</a>
+  <a href="tel:+8675487220468">☎ 0754-8722 0468</a>
+  <a href="mailto:weihong-555@163.com">✉ weihong-555@163.com</a>
+</div>
+
+<div class="section-title">产品系列</div>
+
+<div class="grid">
+  <div class="card">
+    <span class="icon">🥷</span>
+    <h3>忍者系列</h3>
+    <p>经典忍者造型，多色可选<br>配件丰富，适合收藏与批发</p>
+  </div>
+  <div class="card">
+    <span class="icon">👮</span>
+    <h3>警察系列</h3>
+    <p>警用装备细节还原<br>多场景套装，量大从优</p>
+  </div>
+  <div class="card">
+    <span class="icon">🚒</span>
+    <h3>消防系列</h3>
+    <p>消防员人偶与装备<br>色彩鲜明，安全环保材质</p>
+  </div>
+  <div class="card">
+    <span class="icon">🪖</span>
+    <h3>军事系列</h3>
+    <p>军装人偶全品类<br>陆海空多兵种，支持定制</p>
+  </div>
+</div>
+
+<div class="cta">
+  <a href="mailto:weihong-555@163.com">📧 立即联系询价</a>
+</div>
+
+<footer>
+  © 2026 瀚鸿塑胶玩具制品厂 · 广东汕头 · Canton Fair 2026
+</footer>
+
+</body>
+</html>
