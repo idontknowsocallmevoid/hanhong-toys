@@ -1,1 +1,11 @@
-{"rules":{"version":2}}
+node_modules/
+.DS_Store
+*.log
+
+# local build artifacts (not part of the published site)
+build_card.py
+business-card.pdf
+business-card-preview*.png
+qr.json
+qr_wa.json
+business-card-prompt.md

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>瀚鸿塑胶玩具制品厂 | HANHONG TOYS</title>
+<title>HANHONG PLASTIC TOYS FACTORY | Plastic Action Figure Toys</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, "PingFang SC", sans-serif;
     background: #0f1c2e;
     color: #e2e8f0;
     min-height: 100vh;
@@ -17,91 +17,151 @@
   header {
     background: linear-gradient(135deg, #162a42 0%, #0f1c2e 100%);
     border-bottom: 2px solid #c9a84c;
-    padding: 28px 20px 24px;
+    padding: 32px 16px 26px;
     text-align: center;
   }
   header h1 {
-    font-size: 26px;
+    font-size: 20px;
     color: #ffffff;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   }
   header p {
-    font-size: 13px;
+    font-size: 11px;
     color: #8a9bb5;
-    margin-top: 6px;
+    margin-top: 10px;
     letter-spacing: 1px;
+    line-height: 1.7;
+  }
+  @media (min-width: 641px) {
+    header { padding: 28px 20px 24px; }
+    header h1 { font-size: 26px; letter-spacing: 2px; }
+    header p { font-size: 13px; }
   }
 
-  /* Contact bar */
+  /* Contact bar — stacked on mobile, labeled */
   .contact-bar {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 16px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 22px 16px;
+    margin-top: 8px;
     background: #162a42;
+    border-top: 1px solid #1e3a5f;
     font-size: 14px;
-    border-bottom: 1px solid #1e3a5f;
   }
-  .contact-bar a {
-    color: #c9a84c;
+  .contact-bar a, .contact-bar .c-item {
+    color: #e2e8f0;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 320px;
+    max-width: 90vw;
+    justify-content: flex-start;
   }
-  .contact-bar span { color: #8a9bb5; }
+  .contact-bar .label {
+    display: inline-block;
+    color: #8a9bb5;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    width: 72px;
+    text-align: left;
+    flex-shrink: 0;
+  }
+  .contact-bar a.c-item:hover,
+  .contact-bar a.c-item:active { color: #c9a84c; }
+  @media (min-width: 641px) {
+    .contact-bar {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+      font-size: 14px;
+    }
+    .contact-bar a, .contact-bar .c-item { width: auto; max-width: none; }
+  }
 
   /* Section title */
   .section-title {
     text-align: center;
-    padding: 32px 20px 20px;
-    font-size: 18px;
+    padding: 26px 16px 8px;
+    font-size: 16px;
     color: #c9a84c;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
   }
+  .section-sub {
+    text-align: center;
+    padding: 0 16px 18px;
+    font-size: 12px;
+    color: #8a9bb5;
+  }
+  @media (min-width: 641px) {
+    .section-title { padding: 32px 20px 8px; font-size: 18px; }
+    .section-sub { font-size: 13px; }
+  }
 
-  /* Product grid */
+  /* Product grid — 2 cols on phone */
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 0 20px 40px;
+    gap: 12px;
+    padding: 0 12px 32px;
     max-width: 640px;
     margin: 0 auto;
   }
   @media (min-width: 641px) {
-    .grid { grid-template-columns: repeat(4, 1fr); max-width: 960px; }
+    .grid { grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1080px; }
   }
 
   .card {
+    display: block;
     background: linear-gradient(145deg, #162a42, #1a3352);
     border: 1px solid #1e3a5f;
     border-radius: 12px;
-    padding: 28px 16px 22px;
+    overflow: hidden;
     text-align: center;
+    text-decoration: none;
     transition: transform 0.2s, border-color 0.2s;
   }
-  .card:hover {
-    transform: translateY(-3px);
-    border-color: #c9a84c66;
+  .card:hover, .card:active {
+    transform: translateY(-4px);
+    border-color: #c9a84c;
   }
-
-  /* Emoji icon placeholder */
-  .icon {
-    font-size: 48px;
-    margin-bottom: 14px;
+  .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     display: block;
   }
+  .card-body { padding: 12px 10px 16px; }
   .card h3 {
-    font-size: 17px;
+    font-size: 15px;
     color: #ffffff;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
   .card p {
-    font-size: 12px;
+    font-size: 11px;
     color: #8a9bb5;
     line-height: 1.6;
+  }
+  .card .view {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #c9a84c;
+    letter-spacing: 1px;
+  }
+  @media (min-width: 641px) {
+    .card-body { padding: 14px 12px 18px; }
+    .card h3 { font-size: 16px; }
+    .card p { font-size: 12px; }
+    .card .view { font-size: 12px; }
   }
 
   /* Accent colors per category */
@@ -112,77 +172,103 @@
 
   /* CTA */
   .cta {
-    text-align: center;
-    padding: 20px 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 20px 36px;
   }
-  .cta a {
+  .btn {
     display: inline-block;
-    background: #c9a84c;
-    color: #0f1c2e;
     font-weight: 700;
     font-size: 15px;
-    padding: 14px 36px;
+    padding: 14px 28px;
     border-radius: 8px;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    min-width: 210px;
+    transition: background 0.2s;
   }
-  .cta a:hover { background: #d4b95e; }
+  .btn-wa { background: #25d366; color: #0a2e17; }
+  .btn-wa:hover, .btn-wa:active { background: #1fbe5a; }
+  .btn-mail { background: transparent; color: #c9a84c; border: 1.5px solid #c9a84c; }
+  .btn-mail:hover, .btn-mail:active { background: rgba(201, 168, 76, 0.12); }
+  @media (max-width: 520px) {
+    .btn { width: 100%; max-width: 320px; min-width: 0; }
+  }
 
   /* Footer */
   footer {
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
+    padding: 20px 16px;
+    font-size: 11px;
     color: #4a5568;
     border-top: 1px solid #1e3a5f;
+    line-height: 1.6;
   }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>瀚鸿塑胶玩具制品厂</h1>
-  <p>HANHONG PLASTIC TOYS FACTORY · 专注塑胶人偶玩具制造</p>
+  <h1>HANHONG PLASTIC TOYS FACTORY</h1>
+  <p>PLASTIC ACTION FIGURE & ROLE-PLAY TOYS<br>WHOLESALE & OEM</p>
 </header>
 
-<div class="contact-bar">
-  <span>👤 林蔚宏</span>
-  <a href="tel:+8613715896168">📱 +86 137 1589 6168</a>
-  <a href="tel:+8675487220468">☎ 0754-8722 0468</a>
-  <a href="mailto:weihong-555@163.com">✉ weihong-555@163.com</a>
-</div>
-
-<div class="section-title">产品系列</div>
+<div class="section-title">Product Series</div>
+<div class="section-sub">Tap any series to browse the full product gallery</div>
 
 <div class="grid">
-  <div class="card">
-    <span class="icon">🥷</span>
-    <h3>忍者系列</h3>
-    <p>经典忍者造型，多色可选<br>配件丰富，适合收藏与批发</p>
-  </div>
-  <div class="card">
-    <span class="icon">👮</span>
-    <h3>警察系列</h3>
-    <p>警用装备细节还原<br>多场景套装，量大从优</p>
-  </div>
-  <div class="card">
-    <span class="icon">🚒</span>
-    <h3>消防系列</h3>
-    <p>消防员人偶与装备<br>色彩鲜明，安全环保材质</p>
-  </div>
-  <div class="card">
-    <span class="icon">🪖</span>
-    <h3>军事系列</h3>
-    <p>军装人偶全品类<br>陆海空多兵种，支持定制</p>
-  </div>
+  <a class="card" href="ninja.html">
+    <img src="pics/ninja/ninja-2.jpg" alt="Ninja Series">
+    <div class="card-body">
+      <h3>Ninja Series</h3>
+      <p>Classic ninja weapons sets<br>Great for collection & wholesale</p>
+      <span class="view">VIEW GALLERY →</span>
+    </div>
+  </a>
+  <a class="card" href="police.html">
+    <img src="pics/police/police-2.jpg" alt="Police Series">
+    <div class="card-body">
+      <h3>Police Series</h3>
+      <p>S.W.A.T. & police role-play sets<br>Bulk orders welcome</p>
+      <span class="view">VIEW GALLERY →</span>
+    </div>
+  </a>
+  <a class="card" href="firefighter.html">
+    <img src="pics/firefighter/firefighter-4.jpg" alt="Firefighter Series">
+    <div class="card-body">
+      <h3>Firefighter Series</h3>
+      <p>Firefighter role-play costumes & gear<br>Bright colors, safe materials</p>
+      <span class="view">VIEW GALLERY →</span>
+    </div>
+  </a>
+  <a class="card" href="military.html">
+    <img src="pics/military/military-2.jpg" alt="Military Series">
+    <div class="card-body">
+      <h3>Military Series</h3>
+      <p>Combat soldier sets, all branches<br>Customization available</p>
+      <span class="view">VIEW GALLERY →</span>
+    </div>
+  </a>
 </div>
 
 <div class="cta">
-  <a href="mailto:weihong-555@163.com">📧 立即联系询价</a>
+  <a class="btn btn-wa" href="https://wa.me/8613923943220" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  <a class="btn btn-mail" href="mailto:weihong-555@163.com">Email Us for a Quote</a>
+</div>
+
+<div class="contact-bar">
+  <span class="c-item"><span class="label">Contact</span>Weihong Lin</span>
+  <a class="c-item" href="https://wa.me/8613923943220" target="_blank" rel="noopener"><span class="label">WhatsApp</span>+86 139 2394 3220</a>
+  <a class="c-item" href="tel:+8613715896168"><span class="label">Tel</span>+86 137 1589 6168</a>
+  <a class="c-item" href="tel:+8675487220468"><span class="label">Tel</span>+86 0754 8722 0468</a>
+  <a class="c-item" href="mailto:weihong-555@163.com"><span class="label">Email</span>weihong-555@163.com</a>
 </div>
 
 <footer>
-  © 2026 瀚鸿塑胶玩具制品厂 · 广东汕头 · Canton Fair 2026
+  © 2026 HANHONG PLASTIC TOYS FACTORY<br>Shantou, Guangdong, China<br>Canton Fair 2026
 </footer>
 
 </body>
