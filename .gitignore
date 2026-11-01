@@ -9,3 +9,4 @@ business-card-preview*.png
 qr.json
 qr_wa.json
 business-card-prompt.md
+deploy.py
